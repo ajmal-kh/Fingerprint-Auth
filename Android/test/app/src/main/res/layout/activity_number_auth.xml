@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumberAuth">
+
+        <EditText android:id="@+id/etNumber"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:hint="Enter Phone Number"
+            android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnSendOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/etNumber"
+            android:text="SEND VERIFICATION "/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/llVerification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText android:id="@+id/etVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:hint="Verification Code"/>
+
+            <Button android:id="@+id/btnVerifyOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:visibility="gone"
+                android:layout_below="@id/etVerification"
+                android:text="VERIFY "/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</RelativeLayout>

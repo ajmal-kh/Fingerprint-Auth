@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
+    tools:context=".FingerprintLogin">
+
+    <TextView
+        android:id="@+id/headingPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvRegisterHere"
+        android:layout_marginTop="50dp"
+        android:text="Fingerprint Authentication"
+        android:textColor="@android:color/black"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/fingerprintImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/headingPanel"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@mipmap/fingerprint" />
+
+    <TextView
+        android:id="@+id/paraPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/fingerprintImage"
+        android:text="Place your finger on fingerprint scanner"
+        android:textSize="15dp" />
+
+</RelativeLayout>

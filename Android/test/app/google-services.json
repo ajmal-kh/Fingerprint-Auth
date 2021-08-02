@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "151761808246",
+    "firebase_url": "https://quickpay-95a5b.firebaseio.com",
+    "project_id": "quickpay-95a5b",
+    "storage_bucket": "quickpay-95a5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151761808246:android:d85b62678b15d7ad",
+        "android_client_info": {
+          "package_name": "com.ak.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151761808246-j0vlibgu01advq45vclg3ghl5rqetftt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ak.test",
+            "certificate_hash": "332aaf3b0042f23e333cb58f958c378f396f935f"
+          }
+        },
+        {
+          "client_id": "151761808246-d99mmhnn9359mpes5vklr0fgbdeiul5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGWgXqO1v85-p81WqP13n4klkQAhb8cL8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151761808246-d99mmhnn9359mpes5vklr0fgbdeiul5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

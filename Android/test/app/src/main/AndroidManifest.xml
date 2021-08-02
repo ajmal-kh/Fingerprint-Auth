@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ak.test">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Mycart"></activity>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".NewProduct5Order" />
+        <activity android:name=".NewProduct4Order" />
+        <activity android:name=".NewProduct3Order" />
+        <activity android:name=".NewProduct2Order" />
+        <activity android:name=".NewProduct1Order" />
+        <activity android:name=".NewProduct5" />
+        <activity android:name=".NewProduct4" />
+        <activity android:name=".NewProduct3" />
+        <activity android:name=".NewProduct2" />
+        <activity android:name=".NewProduct1" />
+        <activity android:name=".Cspeaker6Order" />
+        <activity android:name=".Cspeaker6" />
+        <activity android:name=".Cwatch6Order" />
+        <activity android:name=".Cwatch5Order" />
+        <activity android:name=".Cwatch4Order" />
+        <activity android:name=".Cwatch3Order" />
+        <activity android:name=".Cwatch2Order" />
+        <activity android:name=".Cwatch1Order" />
+        <activity android:name=".Cwatch6" />
+        <activity android:name=".Cwatch5" />
+        <activity android:name=".Cwatch4" />
+        <activity android:name=".Cwatch3" />
+        <activity android:name=".Cwatch2" />
+        <activity android:name=".Cwatch1" />
+        <activity android:name=".Cheadphone6Order" />
+        <activity android:name=".Cheadphone5Order" />
+        <activity android:name=".Cheadphone4Order" />
+        <activity android:name=".Cheadphone3Order" />
+        <activity android:name=".Cheadphone2Order" />
+        <activity android:name=".Cheadphone1Order" />
+        <activity android:name=".Cheadphone6" />
+        <activity android:name=".Cheadphone5" />
+        <activity android:name=".Cheadphone4" />
+        <activity android:name=".Cheadphone3" />
+        <activity android:name=".Cheadphone2" />
+        <activity android:name=".Cheadphone1" />
+        <activity android:name=".Ctv6Order" />
+        <activity android:name=".Ctv5Order" />
+        <activity android:name=".Ctv4Order" />
+        <activity android:name=".Ctv3Order" />
+        <activity android:name=".Ctv2Order" />
+        <activity android:name=".Ctv1Order" />
+        <activity android:name=".Ctv6" />
+        <activity android:name=".Ctv5" />
+        <activity android:name=".Ctv4" />
+        <activity android:name=".Ctv3" />
+        <activity android:name=".Ctv2" />
+        <activity android:name=".Ctv1" />
+        <activity android:name=".Cspeaker5Order" />
+        <activity android:name=".Cspeaker4Order" />
+        <activity android:name=".Cspeaker3Order" />
+        <activity android:name=".Cspeaker2Order" />
+        <activity android:name=".Cspeaker1Order" />
+        <activity android:name=".Cspeaker5" />
+        <activity android:name=".Cspeaker4" />
+        <activity android:name=".Cspeaker3" />
+        <activity android:name=".Cspeaker2" />
+        <activity android:name=".Cspeaker1" />
+        <activity android:name=".Claptop5Order" />
+        <activity android:name=".Claptop4Order" />
+        <activity android:name=".Claptop3Order" />
+        <activity android:name=".Claptop2Order" />
+        <activity android:name=".Claptop1Order" />
+        <activity android:name=".Claptop5" />
+        <activity android:name=".Claptop4" />
+        <activity android:name=".Claptop3" />
+        <activity android:name=".Claptop2" />
+        <activity android:name=".Claptop1" />
+        <activity android:name=".SpeakerCategory" />
+        <activity android:name=".Cmobile4Order" />
+        <activity android:name=".Cmobile3Order" />
+        <activity android:name=".Cmobile2Order" />
+        <activity android:name=".Cmobile1Order" />
+        <activity android:name=".Cmobile4" />
+        <activity android:name=".Cmobile3" />
+        <activity android:name=".Cmobile2" />
+        <activity android:name=".Cmobile1" />
+        <activity android:name=".WatchCategory" />
+        <activity android:name=".HeadphoneCategory" />
+        <activity android:name=".TelevisionCategory" />
+        <activity android:name=".LaptopCategory" />
+        <activity android:name=".MobileCategory" />
+        <activity android:name=".NumberAuth" />
+        <activity android:name=".FingerprintLogin" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PopularProduct1" />
+        <activity android:name=".PopularProduct2" />
+        <activity android:name=".PopularProduct3" />
+        <activity android:name=".PopularProduct4" />
+        <activity android:name=".PopularProduct5" />
+        <activity android:name=".PopularProduct6" />
+        <activity android:name=".PlaceOrder1" />
+        <activity android:name=".PlaceOrder2" />
+        <activity android:name=".PlaceOrder3" />
+        <activity android:name=".PlaceOrder4" />
+        <activity android:name=".PlaceOrder5" />
+        <activity android:name=".PlaceOrder6" />
+        <activity android:name=".OrderSuccessfull1" />
+        <activity android:name=".OrderSuccessfull2" />
+        <activity android:name=".OrderSuccessfull3" />
+        <activity android:name=".OrderSuccessfull4" />
+        <activity android:name=".OrderSuccessfull5" />
+        <activity android:name=".OrderSuccessfull6" />
+        <activity android:name=".RegisterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ProfileActivity" />
+    </application>
+
+</manifest>

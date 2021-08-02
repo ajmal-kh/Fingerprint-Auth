@@ -1,0 +1,111 @@
+package com.ak.test;
+
+import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+public class PlaceOrder1 extends AppCompatActivity {
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    User user;
+    private EditText etFirst,etLast,etMobile,etAltMobile,etPin,etHouse,etRoad,etLandmark,etCity,etState;
+    private Button btnOrder;
+    //phone verification
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.place_order1);
+        etFirst = (EditText) findViewById(R.id.etFirst);
+        etLast = (EditText) findViewById(R.id.etLast);
+        etMobile = (EditText) findViewById(R.id.etMobile);
+        etAltMobile = (EditText) findViewById(R.id.etAltMobile);
+        etPin = (EditText) findViewById(R.id.etPin);
+        etHouse = (EditText) findViewById(R.id.etHouse);
+        etRoad = (EditText) findViewById(R.id.etRoad);
+        etLandmark = (EditText) findViewById(R.id.etLandmark);
+        etCity = (EditText) findViewById(R.id.etCity);
+        etState = (EditText) findViewById(R.id.etState);
+        btnOrder = (Button) findViewById(R.id.btnOrder);
+        user = new User();
+        FirebaseApp.initializeApp(this);
+        databaseReference = FirebaseDatabase.getInstance().getReference("PopularProduct1");
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addUsers();
+            }
+        });
+        //phone authentication
+
+    }
+
+    public void addUsers(){
+        String first = etFirst.getText().toString().trim();
+        String last = etLast.getText().toString().trim();
+        String mobile = etMobile.getText().toString().trim();
+        String altMobile = etAltMobile.getText().toString().trim();
+        String pin = etPin.getText().toString().trim();
+        String house = etHouse.getText().toString().trim();
+        String road = etRoad.getText().toString().trim();
+        String landmark = etLandmark.getText().toString().trim();
+        String city = etCity.getText().toString().trim();
+        String state = etState.getText().toString().trim();
+        if(TextUtils.isEmpty(first))  {
+            etFirst.setError("required");
+        }else if(first.length()>10){
+            etFirst.setError("should be less than 10");
+        }else if(last.length()>10){
+            etLast.setError("should be less than 10");
+        }else if (TextUtils.isEmpty(last)){
+            etLast.setError("required");
+        }else if (TextUtils.isEmpty(mobile)){
+            etMobile.setError("required");
+        }else if(mobile.length()>10 || mobile.length()<10){
+            etMobile.setError("enter valid 10 digit mobile number");
+        }else if (TextUtils.isEmpty(pin)){
+            etPin.setError("required");
+        }else if(pin.length()>10){
+            etPin.setError("enter valid pin number");
+        }else if (TextUtils.isEmpty(house)){
+            etHouse.setError("required");
+        }else if (TextUtils.isEmpty(road)){
+            etRoad.setError("required");
+        }else if (TextUtils.isEmpty(city)){
+            etCity.setError("required");
+        }
+
+        else {
+            String id = databaseReference.push().getKey();
+            User user = new User(id, first, last,mobile,altMobile,pin,house,road,landmark,city,state);
+            databaseReference.child(id).setValue(user);
+            Toast.makeText(PlaceOrder1.this,"Order Successfull",Toast.LENGTH_SHORT).show();
+            Intent intent= new Intent(PlaceOrder1.this,OrderSuccessfull1.class);
+            startActivity(intent);
+            //Toast.makeText(PlaceOrder1.this,"enter name",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    //phone verification
+
+}
+
